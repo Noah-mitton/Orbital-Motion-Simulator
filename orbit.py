@@ -1,17 +1,15 @@
 import numpy as np
-import time
-import pygame
-import sys
+import pygame, sys
 pygame.init()
 
-M=1.989 * 10**30
-m=5.972 * 10**24
-G=6.6743 * 10**-11
-r=150000000
+M=1.989 * 10**30.  #Mass of the central object
+m=5.972 * 10**24.  #Mass of the orbiting object
+G=6.6743 * 10**-11.   #Gravitational constant
+r=150000000.  #Initial distance of orbiting object from central object
 theta=0
 dr=0
-dtheta=1649.69/263000
-dt=0.5
+dtheta=1649.69/263000.   #Initial angular velocity of orbiting object. Can be calculated as period of rotation/time(s)
+dt=0.5.  #Time step for derivative calculations
 x=0
 y=0
 t=0
